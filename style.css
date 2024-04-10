@@ -17,6 +17,8 @@
 }
 
 div#grid {
+    aspect-ratio: 1 / 1;
+
     display               : grid;
     grid-template-rows    : repeat(5, 1fr);
     grid-template-columns : repeat(5, 1fr);
@@ -25,8 +27,8 @@ div#grid {
     gap                   : 5px;
     padding               : 5px;
     border-radius         : 10px;
-    max-width:1322px;
-    width:40%
+    max-width             : 800px;
+    width                 : 50%
 }
 
 div.form {
@@ -37,15 +39,17 @@ div.page {
     height       : 11in;
     font-size    : 14pt;
     font-family  : 'Open Sans';
+    word-break   : break-word;
 }
 
 .cell {
-    aspect-ratio    : 1 / 1;
+    aspect-ratio    : 1 /1;
     display         : flex;
     justify-content : center;
     align-items     : center;
     text-align      : center;
     background      : white;
+    overflow        : hidden;
 }
 
 .cell img {
