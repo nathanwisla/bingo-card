@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo!</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>    
+    <div class="no-print form" id="inputs" style="display:grid; grid-template-columns:1fr 1fr;">
+        <div id="text-form">        
+            <label for="title-input">Title</label><br>
+            <input id="title-input" type="text" name="title-update" placeholder="Title Name"><br>
+            <label for="input-1-1">Top-left</label><br>
+            <input id="input-1-1" type="text" name="input-1-1" placeholder="Text for top-left corner"><br>
+            <label for="input-1-5">Top-right</label><br>
+            <input id="input-1-5" type="text" name="input-1-5" placeholder="Text for top-right corner"><br>
+            <label for="input-5-1">Bottom-left</label><br>
+            <input id="input-5-1" type="text" name="input-5-1" placeholder="Text for bottom-left corner"><br>
+            <label for="input-5-5">Bottom-right</label><br>
+            <input id="input-5-5" type="text" name="input-5-5" placeholder="Text for bottom-right corner"><br>
+        </div>
+
+        <div id="file-form" style="grid-row-end:span 2; display:flex; flex-direction:column; justify-content:space-evenly;">
+            <label for="csv-input">
+                Please supply a CSV<br>
+                <input id="csv-input" type="file" accept="text/csv|text/plain">
+            </label>
+            
+            <label for="img-input">
+                Provide a center image<br>
+                <input id="img-input" type="file" accept="image/*">    
+            </label>
+            
+        </div>    
+
+        <input id="text-submit" type="button" value="Submit" style="width:min-content">
+        <input type="button" id="randomize" value="Randomize!" style="height:50px; width:50%; max-width:666px; grid-column-end:span 2; justify-self: center;">
+    </div>
+
+    <div class="page" style="display:flex; flex-direction:column; align-items:center;">
+        
+        <h1 id="title">Title</h1>
+        <div id="grid">
+            <div class="cell blue" id="cell-1-1">1</div>
+            <div class="cell yellow" id="cell-1-2">2</div>
+            <div class="cell green" id="cell-1-3">3</div>
+            <div class="cell yellow" id="cell-1-4">4</div>
+            <div class="cell blue" id="cell-1-5">5</div>
+            <div class="cell yellow" id="cell-2-1">6</div>
+            <div class="cell green" id="cell-2-2">7</div>
+            <div class="cell yellow" id="cell-2-3">8</div>
+            <div class="cell green" id="cell-2-4">9</div>
+            <div class="cell yellow" id="cell-2-5">10</div>
+            <div class="cell green" id="cell-3-1">11</div>
+            <div class="cell yellow" id="cell-3-2">12</div>
+            <div class="cell" id="cell-3-3"><img id="img" style="display:none;"/><span id="img-text" style="display:block">FREE SPACE</span></div>
+            <div class="cell yellow" id="cell-3-4">14</div>
+            <div class="cell green" id="cell-3-5">15</div>
+            <div class="cell yellow" id="cell-4-1">16</div>
+            <div class="cell green" id="cell-4-2">17</div>
+            <div class="cell yellow" id="cell-4-3">18</div>
+            <div class="cell green" id="cell-4-4">19</div>
+            <div class="cell yellow" id="cell-4-5">20</div>
+            <div class="cell blue" id="cell-5-1">21</div>
+            <div class="cell yellow" id="cell-5-2">22</div>
+            <div class="cell green" id="cell-5-3">23</div>
+            <div class="cell yellow" id="cell-5-4">24</div>
+            <div class="cell blue" id="cell-5-5">25</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+/*
+   Name    : style.css
+   Author  : Nathan Wisla
+   Purpose : Basic styling of the bingo card.
+   Date    : 2024-04-08 
+ */
+ 
+ /* Create settings for the print window */
+@media print {
+    .no-print {
+        display : none !important;
+    }
+    
+    div#grid {
+        width : 90% !important;
+    }
+}
+
+div#grid {
+    display               : grid;
+    grid-template-rows    : repeat(5, 1fr);
+    grid-template-columns : repeat(5, 1fr);
+
+    background            : black;
+    gap                   : 5px;
+    padding               : 5px;
+    border-radius         : 10px;
+    max-width:1322px;
+    width:40%
+}
+
+div.form {
+    font-size : 12pt;
+}
+
+div.page {
+    height       : 11in;
+    font-size    : 14pt;
+    font-family  : 'Open Sans';
+}
+
+.cell {
+    aspect-ratio    : 1 / 1;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    text-align      : center;
+    background      : white;
+}
+
+.cell img {
+    aspect-ratio  : inherit;
+    width         : 90%;
+}
+
+/* .blue {
+    background: lightskyblue
+}
+
+.green {
+    background: darkseagreen;
+}
+
+.yellow {
+    background: moccasin
+} */
