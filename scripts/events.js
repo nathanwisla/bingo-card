@@ -47,6 +47,7 @@ text._5_5 = document.getElementById("cell-5-5");
 file.csv.onchange = () => {
     let reader = new FileReader();
     reader.readAsText(file.csv.files[0]);
+    button.random.disabled= false;
 
     reader.onload = (evt) => {
         file.csv_body = parse_csv(evt.target.result);
