@@ -63,15 +63,35 @@ file.img.onchange = () => {
         file.img_dom.src = evt.target.result;
         file.img_dom.style.display = "block";
         text._3_3.lastChild.style.display = "none";
-        
+
     }
 }
 
 button.random.onclick = () => {
 
     if(file.csv_uploaded){
+        // Since insert_random_text() pops the array, create a copy and randomize the copy
+        // JavaScript '=' operator assigns a reference to an object, it doesn't create a copy.
+        // Since arrays are also objects, the copy will have to be made recursively. 
+        // Credit to ChatGPT for the algorithm
+        let csv_copy = (function deepCopy(obj) {
+            if (obj === null || typeof obj !== "object") {
+                return obj;
+            }
+
+            let copy = Array.isArray(obj) ? [] : {};
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) {
+
+                    copy[key] = deepCopy(obj[key]);
+                }
+            }
+            return copy;
+        })(file.csv_body);
+
         console.log("inserting random text from file!")
-        insert_random_text(file.csv_body)
+        
+        insert_random_text(csv_copy)
     } else {
         console.log("no .csv supplied")
     }
