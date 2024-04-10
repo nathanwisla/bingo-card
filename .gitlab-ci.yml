@@ -6,6 +6,8 @@
 
 # Full project: https://gitlab.com/pages/plain-html
 pages:
+  tags:
+    - pages
   stage: deploy
   environment: production
   script:
