@@ -47,7 +47,7 @@ text._5_5 = document.getElementById("cell-5-5");
 file.csv.onchange = () => {
     let reader = new FileReader();
     reader.readAsText(file.csv.files[0]);
-    button.random.disabled= false;
+    button.random.disabled = false;
 
     reader.onload = (evt) => {
         file.csv_body = parse_csv(evt.target.result);
@@ -90,8 +90,8 @@ button.random.onclick = () => {
             return copy;
         })(file.csv_body);
 
-        console.log("inserting random text from file!")
-        
+        console.log("inserting random text from file!")        
+
         insert_random_text(csv_copy)
     } else {
         console.log("no .csv supplied")
