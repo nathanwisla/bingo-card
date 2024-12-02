@@ -43,7 +43,7 @@ div.page {
 }
 
 .cell {
-    aspect-ratio    : 1 /1;
+    aspect-ratio    : 1 / 1;
     display         : flex;
     justify-content : center;
     align-items     : center;
